@@ -32,16 +32,15 @@ function AddNote({ onNoteAdded }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-4 rounded-lg shadow-md w-full max-w-md">
-      <h2 className="text-lg font-bold mb-2">Add a Note</h2>
-      {error && <p className="text-red-500">{error}</p>}
+    <form onSubmit={handleSubmit} className="note-form">
+      <h2>Add a Note</h2>
+      {error && <p className="error">{error}</p>}
       <input
         type="text"
         name="title"
         placeholder="Title"
         value={formData.title}
         onChange={handleChange}
-        className="w-full p-2 border rounded mb-2"
         required
       />
       <textarea
@@ -49,12 +48,9 @@ function AddNote({ onNoteAdded }) {
         placeholder="Content"
         value={formData.content}
         onChange={handleChange}
-        className="w-full p-2 border rounded mb-2"
         required
       />
-      <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
-        Add Note
-      </button>
+      <button type="submit">Add Note</button>
     </form>
   );
 }

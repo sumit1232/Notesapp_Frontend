@@ -29,7 +29,7 @@ function Home() {
   }, [navigate]);
 
   const handleNoteAdded = (newNote) => {
-    setNotes([newNote, ...notes]); // Update UI immediately
+    setNotes((prevNotes) => [newNote, ...prevNotes]); // Add new note at the top
   };
 
   return (
