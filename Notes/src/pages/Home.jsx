@@ -16,7 +16,7 @@ function Home() {
       }
 
       try {
-        const res = await axios.get("http://localhost:8080/api/notes", {
+        const res = await axios.get("https://notesapp-backend-wkce.onrender.com/api/notes", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setNotes(res.data);

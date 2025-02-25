@@ -14,7 +14,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/api/users/register", formData);
+      await axios.post("https://notesapp-backend-wkce.onrender.com/api/users/register", formData);
       navigate("/login"); // Redirect to login page after successful registration
     } catch (err) {
       setError(err.response?.data?.message || "Something went wrong");
