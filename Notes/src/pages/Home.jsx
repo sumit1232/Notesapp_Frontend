@@ -16,7 +16,7 @@ function Home() {
       }
 
       try {
-        const res = await axios.get("http://localhost:5000/api/notes", {
+        const res = await axios.get("http://localhost:8080/api/notes", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setNotes(res.data);
