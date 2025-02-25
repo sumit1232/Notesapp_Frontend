@@ -14,7 +14,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8080/api/users/login", formData);
+      const res = await axios.post("https://notesapp-backend-wkce.onrender.com/api/users/login", formData);
       localStorage.setItem("token", res.data.token); // Store token
       navigate("/"); // Redirect to home page after login
     } catch (err) {
